@@ -27,13 +27,43 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+'.forEach' and '.map' are both advanced array methods. '.forEach' steps through an array but does not return anything. '.map' steps through an array and returns a new array that is filled with the results of the function defined within the '.map' call. They both do no change the origional array. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that takes another function as a parameter. A callback function is a function that is passed to another function (via the functions parameter(s)). 
 
 3. What is closure?
 
+Closure is a feature in JavaScript where an inner(nested) function has access to the outer (enclosing) function's variables. 
+
 4. Describe the four rules of the 'this' keyword.
 
+PRINCIPLE 1: GLOBAL/WINDOW BINDING
+
+this; //outside any specifc object
+
+PRINCIPLE 2: IMPLICIT BINDING
+
+let someObject = {
+  name: "Josh", 
+  speak: function () { return "My name is " + this.name };  
+// Inside a specific object
+}
+
+PRINCIPLE 3: NEW BINDING
+function SomeConstructor () {
+  this.name = "Josh";
+  this.speak = function () { return "My name is " + this.name" };
+}
+let someObject = new SomeConstructor(); // "new" creates a new object for "this" to hug.
+
+PRINCIPLE 4: EXPLICIT BINDING (call/apply)
+someFunction.call(someObject) // Choose some object for someFunction's "this" to hug.
+
 5. Why do we need super() in an extended class?
+
+super() refers to the parent class. It is used to call the constructor of the parent class and to access the parent's properties and methods. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -56,22 +86,22 @@ Your finished project must include all of the following requirements:
 #### Task A: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
+* [x] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
 
 #### Task B: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
+* [x] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+* [x] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 #### Task D: Classes
 
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [x] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -83,6 +113,6 @@ There are a few stretch problems found throughout the files, don't work on them 
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 
 
